@@ -6,6 +6,10 @@
     --text-font-weight:400;
     --bg-color:#fff;
     --accent-color:#000;
+    --text-stroke:#fff;
+    --button-text-color:#fff;
+    --heart-contour-color: #000;
+    --heart-sparks-color:#F00;
     --bg-image:repeating-linear-gradient( #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient( 90deg,#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(#e7e7e7, #1a1a1a);
 
 }
