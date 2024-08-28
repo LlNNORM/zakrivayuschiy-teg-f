@@ -338,6 +338,7 @@
   gap: 8px;
   align-items: center;
   padding: 15px 20px;
+  margin-block-end: 100px;
 }
 .floppy-icon__wrapper {
   inline-size: 28px;
@@ -377,3 +378,7 @@
   inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
 }
 
+.dialog::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
