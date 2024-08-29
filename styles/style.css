@@ -152,7 +152,6 @@
   inset-block-start: 24px;
   z-index: 10;
   font-family: var(--accent-font-family, 'Press Start 2P');
-  font-weight: 400;
   font-size: 14px;
   color: var(--accent-color,#000);
   mix-blend-mode: hard-light;
@@ -172,6 +171,7 @@
   }
 } 
 .card__img {
+  vertical-align: top;
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
@@ -180,10 +180,44 @@
   border-block-end: 2px solid var(--accent-color,#000);
 }
 
+.contrast {
+  filter: contrast(130%);
+}
+
+.brightness{
+  filter: brightness(90%);
+}
+
+.blur {
+  filter: blur(0.2rem);
+} 
+
+.opacity {
+  filter: opacity(0.8);
+} 
+
+.grayscale {
+  filter: grayscale(0.8);
+} 
+
+.saturate {
+  filter: saturate(150%);
+} 
+
+.sepia {
+  filter: sepia(80%);
+} 
+
+.multiple-filter {
+  filter: invert(0.2) brightness(80%) sepia(30%);
+} 
+
+
+
 .card__bottom { 
-  padding: 25px;
+  padding: 25px 26px;
   display: grid;
-  gap: 25px;
+  gap: 26px;
 }
 
 .card__description {
@@ -192,7 +226,7 @@
 .card__buttons {
   display: flex;
   justify-self: end;
-  gap: 12px;
+  gap: 6px;
 }
 
 .sparks {
@@ -286,8 +320,6 @@
     opacity:1;
   }
 }
-
-
 
 .button {
   border: 2px solid var(--accent-color,#000);
