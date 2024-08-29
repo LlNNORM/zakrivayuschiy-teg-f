@@ -47,7 +47,7 @@
   border: 2px solid var(--accent-color, #000);
   background-color: var(--bg-color, #fff);
   margin: 100px auto;
-  @media (width > 375px) {
+  @media (min-width: 375px) {
     width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   }
 }
@@ -345,7 +345,7 @@
   padding: 15px 20px;
   margin-block-end: 100px;
   background-color: var(--bg-color, #000);
-  @media (width > 375px) {
+  @media (min-width: 500px) {
     flex-direction: row;
   }
 }
@@ -353,7 +353,7 @@
 .floppy-icon__wrapper {
   inline-size: 28px;
   block-size: 28px;
-  @media (width > 375px) {
+  @media (min-width: 500px) {
     inline-size: 21px;
     block-size: 21px;
   }
