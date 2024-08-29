@@ -31,7 +31,6 @@
 .container {
   display: grid;
   gap: 50px;
-  background-color: var(--bg-color, #fff);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -55,7 +54,7 @@
 .header__title {
   font-family: var(--accent-font-family, 'Press Start 2P');
   font-weight: 400;
-  font-size: 49px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   color: var(--accent-color);
 }
@@ -66,6 +65,10 @@
   font-size: 14px;
   text-transform: uppercase;
   color: var(--accent-color);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu__list{
@@ -371,10 +374,20 @@
   align-items: center;
   padding: 15px 20px;
   margin-block-end: 100px;
+  @media (width > 375px) {
+    flex-direction: row;
+  }
 }
+
+
+
 .floppy-icon__wrapper {
   inline-size: 28px;
   block-size: 28px;
+  @media (width > 375px) {
+    inline-size: 21px;
+    block-size: 21px;
+  }
 }
 
 .floppy-icon {
