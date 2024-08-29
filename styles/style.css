@@ -17,11 +17,11 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family, 'Inter-Variable'), sans-serif;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--main-font-family, "Inter-Variable"), sans-serif;
+  font-variation-settings: "wght" 400;
   font-size: 18px;
   background-color: var(--bg-color, #fff);
-  color: var(--accent-color,#000);
+  color: var(--accent-color, #000);
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
@@ -40,11 +40,12 @@
   gap: 21px;
   flex-direction: column;
   justify-content: end;
-  align-items:center;
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 22px;
+  align-items: center;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem)
+    clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 22px;
   width: 100%;
-  border: 2px solid var(--accent-color,#000);
-  background-color:var(--bg-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
   margin: 100px auto;
   @media (width > 375px) {
     width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
@@ -52,15 +53,16 @@
 }
 
 .header__title {
-  font-family: var(--accent-font-family, 'Press Start 2P');
+  font-family: var(--accent-font-family, "Press Start 2P");
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   color: var(--accent-color);
 }
 
-.header__subtitle, .theme-menu__button {
-  font-family: var(--accent-font-family, 'Press Start 2P');
+.header__subtitle,
+.theme-menu__button {
+  font-family: var(--accent-font-family, "Press Start 2P");
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -71,12 +73,11 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-.theme-menu__list{
+.theme-menu__list {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-inline-start: 20px;
-  
 }
 
 .theme-menu__button {
@@ -84,95 +85,84 @@
   user-select: none;
   transition: opacity 0.3s ease;
   &:after {
-    content:"";
+    content: "";
     position: absolute;
     block-size: 2px;
     inline-size: 100%;
-    background-color: var(--accent-color,#000);
+    background-color: var(--accent-color, #000);
     inset-block-end: -2px;
     left: 0;
-    scale:0 1;
+    scale: 0 1;
     transform-origin: top left;
     transition: scale 0.3s ease;
   }
-  @media (hover:hover) {
+  @media (hover: hover) {
     &:hover {
       opacity: 0.6;
     }
   }
-  &:focus{
-    outline:none;
+  &:focus {
+    outline: none;
     opacity: 0.6;
   }
-  &:focus-visible{
+  &:focus-visible {
     opacity: 0.6;
-    &.theme-menu__button:after{
-      scale:1 1;
+    &.theme-menu__button:after {
+      scale: 1 1;
     }
   }
 }
 
 .theme-menu__item:has(.theme-menu__button:disabled) {
-      opacity: 0.6;
-      pointer-events: none;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-.theme-menu__item:has(.theme-menu__button:disabled)
-.theme-menu__button:before {
-  content:'▶';
+.theme-menu__item:has(.theme-menu__button:disabled) .theme-menu__button:before {
+  content: "▶";
   position: absolute;
   left: -18px;
   animation: linear-motion 0.5s ease-in-out infinite alternate;
 }
 
-@keyframes linear-motion {
-  from {
-    left: -18px;
-  }
-  to {
-    left: -14px;
-  }
-}
-
 .card {
   background-color: var(--bg-color);
-  border: 2px solid var(--accent-color,#000);
-
+  border: 2px solid var(--accent-color, #000);
 }
-.card__title{
-  font-variation-settings: 'wght' 700;
+.card__title {
+  font-variation-settings: "wght" 700;
   font-size: 18px;
   padding: 4px 10px;
-  border-block-end: 2px solid var(--accent-color,#000);
+  border-block-end: 2px solid var(--accent-color, #000);
 }
 
-.card__img-wrapper{
+.card__img-wrapper {
   position: relative;
 }
-.card__img-label{
+.card__img-label {
   position: absolute;
   inset-inline-end: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
   inset-block-start: 24px;
   z-index: 10;
-  font-family: var(--accent-font-family, 'Press Start 2P');
+  font-family: var(--accent-font-family, "Press Start 2P");
   font-size: 14px;
-  color: var(--accent-color,#000);
+  color: var(--accent-color, #000);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  text-shadow:
-  -1px 0 var(--text-stroke, #fff), 
-  0 1px var(--text-stroke, #fff), 
-  1px 0 var(--text-stroke, #fff), 
-  0 -1px var(--text-stroke, #fff);
+  text-shadow: -1px 0 var(--text-stroke, #fff), 0 1px var(--text-stroke, #fff),
+    1px 0 var(--text-stroke, #fff), 0 -1px var(--text-stroke, #fff);
 }
 
-@supports((text-stroke: 1px var(--text-stroke, #fff)) or (-webkit-text-stroke: 1px var(--text-stroke, #fff))) {
+@supports (
+  (text-stroke: 1px var(--text-stroke, #fff)) or
+    (-webkit-text-stroke: 1px var(--text-stroke, #fff))
+) {
   .card__img-label {
-      -webkit-text-stroke: 1px var(--text-stroke, #fff);
-      text-stroke: 1px var(--text-stroke, #fff);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke, #fff);
+    text-stroke: 1px var(--text-stroke, #fff);
+    text-shadow: none;
   }
-} 
+}
 .card__img {
   vertical-align: top;
   width: 100%;
@@ -180,44 +170,42 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
-  border-block-end: 2px solid var(--accent-color,#000);
+  border-block-end: 2px solid var(--accent-color, #000);
 }
 
 .contrast {
   filter: contrast(130%);
 }
 
-.brightness{
+.brightness {
   filter: brightness(90%);
 }
 
 .blur {
   filter: blur(0.2rem);
-} 
+}
 
 .opacity {
   filter: opacity(0.8);
-} 
+}
 
 .grayscale {
   filter: grayscale(0.8);
-} 
+}
 
 .saturate {
   filter: saturate(150%);
-} 
+}
 
 .sepia {
   filter: sepia(80%);
-} 
+}
 
 .multiple-filter {
   filter: invert(0.2) brightness(80%) sepia(30%);
-} 
+}
 
-
-
-.card__bottom { 
+.card__bottom {
   padding: 25px 26px;
   display: grid;
   gap: 26px;
@@ -233,53 +221,53 @@
 }
 
 .sparks {
-  opacity:0;
+  opacity: 0;
 }
 
-.like-icon{
+.like-icon {
   display: flex;
   align-items: center;
   border: 2px solid transparent;
   transition: border 0.3s ease;
   & .core {
-    fill:transparent;
+    fill: transparent;
     transition: fill 0.3s 0.05s linear;
   }
   & .main-body {
-    fill:transparent;
-    transition:  fill 0.3s linear;
+    fill: transparent;
+    transition: fill 0.3s linear;
   }
 
   & .contour {
     transition: fill 0.1s linear;
   }
-  
-  &:focus{
+
+  &:focus {
     outline: none;
   }
   &:focus-visible {
     border: 2px solid var(--accent-color, #000);
   }
-  @media (hover:hover) {
-    &:hover{
+  @media (hover: hover) {
+    &:hover {
       & .core {
         transition: fill 0.3s linear;
-        fill:var(--heart-contour-color,#000);
+        fill: var(--heart-contour-color, #000);
       }
       & .main-body {
-        transition:  fill 0.3s 0.05s linear;
-        fill:var(--heart-contour-color,#000);
+        transition: fill 0.3s 0.05s linear;
+        fill: var(--heart-contour-color, #000);
       }
     }
   }
   :active {
     & .core {
       transition: fill 0.3s linear;
-      fill:var(--heart-filling-color,#F00);
+      fill: var(--heart-filling-color, #f00);
     }
     & .main-body {
-      transition:  fill 0.3s 0.05s linear;
-      fill:var(--heart-filling-color,#F00);
+      transition: fill 0.3s 0.05s linear;
+      fill: var(--heart-filling-color, #f00);
     }
   }
 }
@@ -287,15 +275,15 @@
 .like-icon.is-liked {
   & .core {
     transition: fill 0.3s linear;
-    fill:var(--heart-filling-color,#F00);
+    fill: var(--heart-filling-color, #f00);
   }
   & .main-body {
-    transition:  fill 0.3s 0.05s linear;
-    fill:var(--heart-filling-color,#F00);
+    transition: fill 0.3s 0.05s linear;
+    fill: var(--heart-filling-color, #f00);
   }
   & .contour {
-    transition:  fill 0.3s 0.06s linear;
-    fill:var(--heart-filling-color,#F00);
+    transition: fill 0.3s 0.06s linear;
+    fill: var(--heart-filling-color, #f00);
   }
   & .heart {
     transform-origin: center;
@@ -306,29 +294,11 @@
   }
 }
 
-@keyframes scaling {
-  from {
-    scale:1;
-  }
-  to {
-    scale:1.3;
-  }
-}
-
-@keyframes appearing {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
-}
-
 .button {
-  border: 2px solid var(--accent-color,#000);
-  font-family: var(--accent-font-family, 'Press Start 2P');
+  border: 2px solid var(--accent-color, #000);
+  font-family: var(--accent-font-family, "Press Start 2P");
   font-size: 14px;
-} 
+}
 
 .card__like-button {
   position: relative;
@@ -336,13 +306,13 @@
   padding: 11.5px 35px;
   transition: box-shadow 0.3s ease;
   &:after {
-    content:"";
+    content: "";
     position: absolute;
     block-size: 100%;
     inline-size: 100%;
-    background-color: var(--accent-color,#000);
+    background-color: var(--accent-color, #000);
     inset: 0;
-    scale:0 1;
+    scale: 0 1;
     transform-origin: top left;
     transition: scale 0.5s ease-in-out;
   }
@@ -350,7 +320,7 @@
     outline: none;
   }
   &:focus-visible {
-    box-shadow: 2px 2px 0 var(--accent-color,#000);
+    box-shadow: 2px 2px 0 var(--accent-color, #000);
   }
   &:hover {
     &:after {
@@ -362,7 +332,7 @@
 .button__text {
   position: relative;
   z-index: 10;
-  color:var(--button-text-color);
+  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -374,12 +344,11 @@
   align-items: center;
   padding: 15px 20px;
   margin-block-end: 100px;
+  background-color: var(--bg-color, #000);
   @media (width > 375px) {
     flex-direction: row;
   }
 }
-
-
 
 .floppy-icon__wrapper {
   inline-size: 28px;
@@ -398,8 +367,8 @@
 .dialog {
   padding: 30px clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem);
   background-color: var(--bg-color, #fff);
-  color:var(--accent-color,#000);
-  border: 2px solid var(--accent-color,#000)
+  color: var(--accent-color, #000);
+  border: 2px solid var(--accent-color, #000);
 }
 
 .dialog__button {
@@ -416,8 +385,8 @@
   gap: 20px;
 }
 
-.dialog__text{
-  font-family: var(--accent-font-family, 'Press Start 2P');
+.dialog__text {
+  font-family: var(--accent-font-family, "Press Start 2P");
   font-size: 14px;
   line-height: 150%;
   inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
