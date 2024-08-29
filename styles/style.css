@@ -210,7 +210,7 @@
 }
 
 .sepia {
-  filter: sepia(80%);
+  filter: sepia(20%);
 }
 
 .multiple-filter {
