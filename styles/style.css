@@ -192,20 +192,8 @@
   filter: brightness(150%) blur(0.07rem);
 }
 
-.hue-rotate {
-  filter: hue-rotate(-180deg);
-}
-
-.grayscale {
-  filter: grayscale(0.8);
-}
-
 .brightness-contrast {
   filter: brightness(130%) contrast(130%);
-}
-
-.brightness {
-  filter: brightness(130%);
 }
 
 .saturate {
