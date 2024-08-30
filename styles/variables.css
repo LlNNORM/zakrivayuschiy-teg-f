@@ -2,7 +2,7 @@
 :root {
   --main-font-family: "Inter-Variable";
   --accent-font-family: "Press Start 2P";
-  --title-font-weight: 700;
+  --title-font-weight: "wght" 700;
   --text-font-weight: 400;
   --bg-color: #fff;
   --accent-color: #000;

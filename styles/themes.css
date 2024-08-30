@@ -1,5 +1,5 @@
 :root.theme-light {
-  --title-font-weight: 700;
+  --title-font-weight: "wght" 700;
   --text-font-weight: 400;
   --bg-color: #fff;
   --accent-color: #000;
@@ -12,7 +12,7 @@
 }
 
 :root.theme-dark {
-  --title-font-weight: 785;
+  --title-font-weight: "wght" 785;
   --text-font-weight: 465;
   --bg-color: #000;
   --accent-color: #00cc14;
@@ -26,7 +26,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --title-font-weight: 785;
+    --title-font-weight: "wght" 785;
     --text-font-weight: 465;
     --bg-color: #000;
     --accent-color: #00cc14;
